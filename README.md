@@ -26,6 +26,8 @@ In short, the state is **ONGOING**
     - 2nd order accurate (Neumann condition approximated using central difference
 - The mixed finite element method can be used to solve the clamped plate equation with linear interpolation functions as a basis
     - 2nd order accurate
+#### Quality of life
+- Using pybind, the results of the solver classes can be easily read in python, allowing for easier testing and visualization.
 ### Currently in the works
 - The finite element method using cubic hermite interpolation functions as a basis
     - The mass matrix seems to function properly.
@@ -33,6 +35,11 @@ In short, the state is **ONGOING**
         - The mass matrix seems to function well through testing with simple functions, more complex functions testing is possible but easier if functionality of the nodes and grid improves
         - I suspect boundary conditions are not implemented correctly but a more abstract implementation of the nodes/grid eases the testing.
 ### Future improvements
-- Increase node functionality
+- Increase node functionality (**now**)
     - Add function class to give to nodes to evaluate those functions and their derivatives on the nodes.
     - Add a more extensive labeling to distinguish not simpley internal/boundary nodes but also have different boundary labels.
+- Increase more general grid generation methods
+    - Add a method to generate a grid, given a user-input boundary (will still be square at first)
+    - Add a simple interface in python to "draw" domains
+- Create some function mapping
+    - Function classes should be definable in python to redduce recompilation.
