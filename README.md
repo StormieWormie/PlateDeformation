@@ -61,6 +61,12 @@ TODO: show that cubic hermite fem doesn't work.
 ## Convergence
 TODO: show 1st/2nd order error of fdm and 2nd order of mixed_fem.
 
+# User manual
+TODO: write this
+
+# Theory
+For different parts of the theory, you can look at the theory directory (TODO: add this) which looks at different components of the problem.
+
 
 
 
