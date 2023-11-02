@@ -40,5 +40,5 @@ For the elements, I use isoparametric elements. This means that all elements are
 
 ![transformation](https://github.com/StormieWormie/PlateDeformation/assets/46678214/d5adc4e0-c8a7-49c8-8b31-5d9faae0dfe4)
 
-The transformation from the reference coordinates $ \vec{\xi} $ to the real coordinates can be written as
+The transformation from the reference coordinates $\vec{\xi}$ to the real coordinates $\vec{x}$ can be written as
 $$\vec{x} = L\vec{\xi} + \tau$$
