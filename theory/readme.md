@@ -11,3 +11,22 @@ Using testfunction $v$, I write the weak form of the system.
 $$\int_\Omega \nabla^2v\nabla^2u d\vec{x} = \int_\Omega vf d\vec{x} -
 \oint_\Gamma v (\nabla^3u\cdot\vec{n}) d\vec{x}
 +\oint_\Gamma \nabla^2u(\nabla v\cdot\vec{n})d\vec{x}$$
+
+For the simplest implementations of the finite element method, there is an issue here. Linear interpolation function don't work well with the $\nabla^2$ operator as it will always evaluate to 0. Eliminating terms is nice but only to an extend, here it goes too far and the problem becomes trivial and nonsensical. I look at 2 methods around this issue.
+- Mixed finite element method
+  - The equation is too hard so I change the equation
+- cubic hermite basis functions
+  - Linear basis functions don't work but cubic functions might
+ 
+The boundary integrals pose a challenge but if the testfunction has homogeneous clamped plate conditions, both evaluate to 0. 
+
+## Mixed finite element method
+The equation can be rewritten as a coupled system.
+$$-\nabla^2u(x,y) = w(x,y) \qquad \text{for } (x,y)\in \Omega$$
+$$-\nabla^2w(x,y) = f(x,y) \qquad \text{for } (x,y)\in \Omega$$
+
+$$-\int_\Omega vwd\vec{x} + \int_\Omega\nabla v\cdot\nabla ud\vec{x}
+    =\oint_\Gamma v  \frac{\partial u}{\partial \vec{n}} d\vec{x} $$
+    
+$$ \int_\Omega \nabla v_0\cdot\nabla w d\vec{x} =&
+    \oint_\Gamma v_0 \frac{\partial w}{\partial \vec{n}} d\vec{x} + \int_\Omega v_0fd\vec{x}$$
