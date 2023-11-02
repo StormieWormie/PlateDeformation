@@ -1,1 +1,2 @@
 # PlateDeformation
+$\sqrt{x}$
