@@ -56,4 +56,5 @@ K^T
     \frac{\partial}{\partial \eta}
 \end{bmatrix}=
 K^T\nabla_\mathbf{\xi}$$
+
 $$\int f(\vec{x}) dxdy = |L|\int f(L\vec{\xi} + \tau) d\xi d\eta$$
