@@ -43,3 +43,26 @@ In short, the state is **ONGOING**
     - Add a simple interface in python to "draw" domains
 - Create some function mapping
     - Function classes should be definable in python to redduce recompilation.
+# Dependencies
+- Runtime
+    - Eigen3 (https://eigen.tuxfamily.org/index.php?title=Main_Page)
+        - Solving the sparse matrix-vector problem at the end
+    - Pybind (https://pybind11.readthedocs.io/en/stable/index.html)
+        - Linking C++ and python to use the computational power of C++ while using the visualization of python
+- Preperatory
+    - Numpy
+        - What numerical code doesn't use numpy?
+    - Sympy (https://www.sympy.org/en/index.html)
+        - The FEM uses isoparametric and a reference element, integration and derivation is done beforehand on the reference element and all elements use those solutions as a basis to avoid having to do calculus for each element. Sympy is used to ease the workload (integration basis of cubic polynomial requires integration of 100 functions) and solve abstract problems (6/10 cubic polynomials depend on the position of the element and would require solving a linear problem, using an abstract element and solving for it allows me to just fill in the solution for each element instead of solving it each time.)
+     
+# Results
+## Solutions
+TODO: show that cubic hermite fem doesn't work.
+## Convergence
+TODO: show 1st/2nd order error of fdm and 2nd order of mixed_fem.
+
+
+
+
+
+
