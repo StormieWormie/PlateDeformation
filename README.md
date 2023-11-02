@@ -58,16 +58,17 @@ In short, the state is **ONGOING**
         - The FEM uses isoparametric and a reference element, integration and derivation is done beforehand on the reference element and all elements use those solutions as a basis to avoid having to do calculus for each element. Sympy is used to ease the workload (integration basis of cubic polynomial requires integration of 100 functions) and solve abstract problems (6/10 cubic polynomials depend on the position of the element and would require solving a linear problem, using an abstract element and solving for it allows me to just fill in the solution for each element instead of solving it each time.)
      
 # Results
-## Solutions
-TODO: show that cubic hermite fem doesn't work.
 ## Convergence
-TODO: show 1st/2nd order error of fdm and 2nd order of mixed_fem.
+![conv1](https://github.com/StormieWormie/PlateDeformation/assets/46678214/ea5255d6-4030-4e0f-838b-50d485f2b2c6)
 
-# User manual
-TODO: write this
+## Interpolation
+Testing the interpolation $e^{x^2+y^2}$
+![interpolation_error](https://github.com/StormieWormie/PlateDeformation/assets/46678214/6e8402e1-2400-4372-b7e4-093d5f062a6d)
+
+Cubic hermite interpolation gives a fourth order accurate approximation. It seems worth investigating further.
 
 # Theory
-For different parts of the theory, you can look at the theory directory (TODO: add this) which looks at different components of the problem.
+For different parts of the theory, you can look at the theory directory which looks at different components of the problem.
 
 
 
