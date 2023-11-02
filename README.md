@@ -41,6 +41,8 @@ In short, the state is **ONGOING**
 - Increase more general grid generation methods
     - Add a method to generate a grid, given a user-input boundary (will still be square at first)
     - Add a simple interface in python to "draw" domains
+- Add different dimension elements
+    - allowing N-dimensional boundary elements to just use (N-1)-dimensional internal elements
 - Create some function mapping
     - Function classes should be definable in python to redduce recompilation.
 # Dependencies
