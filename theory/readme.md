@@ -42,3 +42,18 @@ For the elements, I use isoparametric elements. This means that all elements are
 
 The transformation from the reference coordinates $\vec{\xi}$ to the real coordinates $\vec{x}$ can be written as
 $$\vec{x} = L\vec{\xi} + \tau$$
+Integration and derivation will come back a lot so I will look at coordinate transforms for those as well.
+$$K=L^{-1}$$
+
+$$\nabla_\mathbf{x}=
+ \begin{bmatrix}
+    \frac{\partial}{\partial x}\\
+    \frac{\partial}{\partial y}
+\end{bmatrix}=
+K^T
+\begin{bmatrix}
+    \frac{\partial}{\partial \xi}\\
+    \frac{\partial}{\partial \eta}
+\end{bmatrix}=
+K^T\nabla_\mathbf{\xi}$$
+$$\int f(\vec{x}) dxdy = |L|\int f(L\vec{\xi} + \tau) d\xi d\eta$$
