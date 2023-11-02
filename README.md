@@ -23,4 +23,16 @@ In short, the state is **ONGOING**
 #### Numerical solvers
 - The finite difference method can be used with a 13-point stencil to solve the clamped plate equation with constant heterogeneous boundary conditions and source.
     - 1st order accurate (Neumann condition approximated using forward difference)
-    - 2nd order accurate (Neumann condition approximated using central difference)
+    - 2nd order accurate (Neumann condition approximated using central difference
+- The mixed finite element method can be used to solve the clamped plate equation with linear interpolation functions as a basis
+    - 2nd order accurate
+### Currently in the works
+- The finite element method using cubic hermite interpolation functions as a basis
+    - The mass matrix seems to function properly.
+    - The solution is simply not consistent with the mixed fem and fdm solutions
+        - The mass matrix seems to function well through testing with simple functions, more complex functions testing is possible but easier if functionality of the nodes and grid improves
+        - I suspect boundary conditions are not implemented correctly but a more abstract implementation of the nodes/grid eases the testing.
+### Future improvements
+- Increase node functionality
+    - Add function class to give to nodes to evaluate those functions and their derivatives on the nodes.
+    - Add a more extensive labeling to distinguish not simpley internal/boundary nodes but also have different boundary labels.
