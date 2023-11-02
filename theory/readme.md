@@ -33,3 +33,4 @@ $$-\int_\Omega vwd\vec{x} + \int_\Omega\nabla v\cdot\nabla ud\vec{x}
 $$ \int_\Omega \nabla v_0\cdot\nabla w d\vec{x} =
     \oint_\Gamma v_0 \frac{\partial w}{\partial \vec{n}} d\vec{x} + \int_\Omega v_0fd\vec{x}$$
 
+For symmetry of the matrices, $v_0$ has homogeneous Dirichlet conditions but $v$ does not. Linear interpolation functions can be used for these equations but I cannot eliminate both boundary integrals. 
