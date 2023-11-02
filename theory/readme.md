@@ -8,3 +8,6 @@ $$\frac{\partial u}{\partial \vec{n}}|_{x,y} = g_2(x,y) \qquad \text{for } (x,y)
 
 ## The weak form
 Using testfunction $v$, I write the weak form of the system.
+$$\int_\Omega \nabla^2v\nabla^2u d\vec{x} = \int_\Omega vf d\vec{x} -
+\oint_\Gamma v (\nabla^3u\cdot\vec{n}) d\vec{x}
++\oint_\Gamma \nabla^2u(\nabla v\cdot\vec{n})d\vec{x}$$
