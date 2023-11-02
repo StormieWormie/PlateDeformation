@@ -51,3 +51,10 @@ $$
 $$
 
 For every element, the only difference in the element mass matrix is a scalar $|L|$. 
+## The stiffness matrix
+The element stiffness matrix can be found by computing 
+$$\int_{\Omega_e} \nabla_{\mathbf{x}}\phi_i (\vec{\xi}) \cdot \nabla_{\mathbf{x}}\phi_j (\vec{\xi}) |L|d\vec{\xi}$$
+
+$$ \int_{\Omega_e} (\nabla_{\mathbf{\xi}} \psi_i)^T K K^T\nabla_{\mathbf{\xi}} \psi_j |L|d\xi d\eta$$
+
+The gradient of the linear functions can be computed beforehand and filled in.
