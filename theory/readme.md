@@ -34,3 +34,11 @@ $$ \int_\Omega \nabla v_0\cdot\nabla w d\vec{x} =
     \oint_\Gamma v_0 \frac{\partial w}{\partial \vec{n}} d\vec{x} + \int_\Omega v_0fd\vec{x}$$
 
 For symmetry of the matrices, $v_0$ has homogeneous Dirichlet conditions but $v$ does not. Linear interpolation functions can be used for these equations but I cannot eliminate both boundary integrals. 
+
+## Isoparametric elements
+For the elements, I use isoparametric elements. This means that all elements are defined as a transformation with respect to a reference element. The functions on each element are also defined as a transformation of the functions on the reference element. This allows me to only have to define the reference functions. 
+
+![transformation](https://github.com/StormieWormie/PlateDeformation/assets/46678214/d5adc4e0-c8a7-49c8-8b31-5d9faae0dfe4)
+
+The transformation from the reference coordinates $\vec{\xi}}$ to the real coordinates can be written as
+$$\vec{x} = L\vec{\xi} + \tau$$
