@@ -58,3 +58,42 @@ $$\int_{\Omega_e} \nabla_{\mathbf{x}}\phi_i (\vec{\xi}) \cdot \nabla_{\mathbf{x}
 $$ \int_{\Omega_e} (\nabla_{\mathbf{\xi}} \psi_i)^T K K^T\nabla_{\mathbf{\xi}} \psi_j |L|d\xi d\eta$$
 
 The gradient of the linear functions can be computed beforehand and filled in.
+
+$$\int_{\Omega_e}\begin{bmatrix}
+-1&-1\\
+1&0\\
+0&1
+\end{bmatrix}
+KK^T
+\begin{bmatrix}
+-1&1&0\\
+-1&0&1
+\end{bmatrix}
+|L|d\xi d\eta$$
+
+There are multiple linear operations but no more variables. I can integrate beforehand.
+
+$$
+\frac{1}{2}
+|L|
+\begin{bmatrix}
+-1&-1\\
+1&0\\
+0&1
+\end{bmatrix}
+KK^T
+\begin{bmatrix}
+-1&1&0\\
+-1&0&1
+\end{bmatrix}
+$$
+
+
+
+
+
+
+
+
+
+
