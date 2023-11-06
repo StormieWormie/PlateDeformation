@@ -56,7 +56,12 @@ In short, the state is **ONGOING**
         - What numerical code doesn't use numpy?
     - Sympy (https://www.sympy.org/en/index.html)
         - The FEM uses isoparametric and a reference element, integration and derivation is done beforehand on the reference element and all elements use those solutions as a basis to avoid having to do calculus for each element. Sympy is used to ease the workload (integration basis of cubic polynomial requires integration of 100 functions) and solve abstract problems (6/10 cubic polynomials depend on the position of the element and would require solving a linear problem, using an abstract element and solving for it allows me to just fill in the solution for each element instead of solving it each time.)
-     
+
+# How to use the code
+The Source directory contains a CMake file that can be used to make all binaries. The most useful components are
+- Make exe (This makes the main.cpp file to "Experiment")
+- Make libs (This builds both FiniteDifferenceMethod and FiniteElementMethod, 2 importable modules for python)
+
 # Results
 ## Convergence
 ![conv1](https://github.com/StormieWormie/PlateDeformation/assets/46678214/ea5255d6-4030-4e0f-838b-50d485f2b2c6)
