@@ -7,3 +7,5 @@ Build/fdm
 Build/fem
 Build/experiment
 Build/Makefile
+Build/__pycache__
+.vscode
