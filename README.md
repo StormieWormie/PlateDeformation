@@ -29,6 +29,11 @@ In short, the state is **ONGOING**
 #### Quality of life
 - Using pybind, the results of the solver classes can be easily read in python, allowing for easier testing and visualization.
 ### Currently in the works
+- Major overhaul of the data structure.
+    - Use get and write instead of accessing components directly to allow future alteration instead of rewriting.
+    - Use more templating
+    - Use inheritance to create node (boundary or internal).
+
 - The finite element method using cubic hermite interpolation functions as a basis
     - The mass matrix seems to function properly.
     - The solution is simply not consistent with the mixed fem and fdm solutions
